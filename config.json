@@ -1,0 +1,24 @@
+{
+    "port": 3000,
+    "interval": 2000,
+    "secretKey": "5&WPdUuNkcuOHpL!YvmlWBlW6FgU=$0uZQh)N$vkUPkqB6sd!2",
+    "urls": [
+        "https://en.wikipedia.org",
+        "https://playground.wordpress.net",
+        "https://example.com",
+        "https://wiki.archlinux.org",
+        "https://www.openstreetmap.org/export/embed.html",
+        "https://www.youtube.com/embed/dQw4w9WgXcQ",
+        "https://archive.org",
+        "https://www.gutenberg.org",
+        "https://httpbin.org",
+        "https://jsonplaceholder.typicode.com",
+        "https://www.gnu.org",
+        "https://www.apache.org",
+        "https://www.debian.org",
+        "https://www.ubuntu.com",
+        "https://www.python.org",
+        "https://nodejs.org",
+        "https://www.rust-lang.org"
+    ]
+}

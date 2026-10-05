@@ -1,0 +1,249 @@
+<?php
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aurora Curated Home & Lifestyle</title>
+    <meta name="description" content="Aurora — handpicked decor & lifestyle essentials." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body class="bg-cream text-ink font-sans antialiased">
+
+    <div id="loadingPopup"
+        class="fixed inset-0 z-100 flex flex-col items-center justify-center bg-cream transition-opacity duration-500">
+
+        <div class="arc-loader"></div>
+
+        <p class="mt-8 text-lg font-medium text-gray-800">Loading... Please wait</p>
+        <p class="mt-2 text-sm text-gray-500">We're checking your connection.</p>
+
+        <div class="mt-10 flex gap-4">
+            <button id="cancelBtn"
+                class="px-6 py-2.5 rounded-full border border-gray-300 text-gray-600 text-sm hover:bg-white transition">
+                Cancel
+            </button>
+            <button id="continueBtn"
+                class="px-6 py-2.5 rounded-full bg-emerald-700 text-white text-sm font-medium hover:bg-emerald-600 transition shadow-sm">
+                Continue
+            </button>
+        </div>
+    </div>
+
+    <div id="store" class="hidden opacity-0 transition-opacity duration-700">
+
+        <div class="bg-emerald-900 text-emerald-50 text-xs tracking-widest uppercase text-center py-2">
+            Free shipping on orders above ₹999
+        </div>
+
+        <header class="sticky top-0 z-50 bg-cream/85 backdrop-blur-md border-b border-black/5">
+            <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+                <a href="#" class="font-serif text-2xl font-bold text-emerald-900">Aurora</a>
+
+                <ul class="hidden md:flex items-center gap-8 text-sm text-gray-700">
+                    <li><a href="#shop" class="hover:text-emerald-700 transition">Shop</a></li>
+                    <li><a href="#story" class="hover:text-emerald-700 transition">Story</a></li>
+                    <li><a href="#contact" class="hover:text-emerald-700 transition">Contact</a></li>
+                </ul>
+
+                <button aria-label="Cart" class="relative text-gray-600 hover:text-emerald-700 transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="1.8">
+                        <path d="M6 6h15l-1.5 9h-12z" />
+                        <circle cx="9" cy="20" r="1" />
+                        <circle cx="18" cy="20" r="1" />
+                    </svg>
+                    <span
+                        class="absolute -top-1.5 -right-2 bg-emerald-700 text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center">2</span>
+                </button>
+            </nav>
+        </header>
+
+        <section class="max-w-6xl mx-auto px-6 py-16 md:py-20 grid md:grid-cols-2 gap-10 items-center">
+            <div>
+                <span class="inline-block text-xs tracking-widest uppercase text-emerald-700 font-medium mb-4">
+                    New · Autumn Collection
+                </span>
+                <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl leading-[1.1] text-emerald-900">
+                    Objects that<br />
+                    <em class="font-normal italic">quietly</em> elevate<br />
+                    your home.
+                </h1>
+                <p class="mt-5 text-gray-600 max-w-md leading-relaxed">
+                    A thoughtfully curated selection of ceramics, textiles, and small rituals.
+                </p>
+                <a href="#shop"
+                    class="inline-flex items-center gap-2 mt-7 bg-emerald-700 text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-emerald-600 transition shadow-sm">
+                    Explore Collection
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M13 5l7 7-7 7" />
+                    </svg>
+                </a>
+            </div>
+
+            <div class="aspect-4/5 rounded-4xl overflow-hidden shadow-xl">
+                <img src="https://images.unsplash.com/photo-1616627561950-9f746e330187?auto=format&fit=crop&w=900&q=80"
+                    alt="Minimal living room with a ceramic vase" class="w-full h-full object-cover" loading="eager" />
+            </div>
+        </section>
+
+        <section class="border-y border-black/5 bg-white/50">
+            <div
+                class="max-w-6xl mx-auto px-6 py-5 flex flex-wrap justify-center md:justify-between gap-x-8 gap-y-2 text-[11px] uppercase tracking-widest text-gray-500">
+                <span>✦ Artisan made</span>
+                <span>✦ Sustainably sourced</span>
+                <span>✦ 30-day returns</span>
+                <span>✦ Carbon neutral</span>
+            </div>
+        </section>
+
+        <section id="shop" class="max-w-6xl mx-auto px-6 py-16">
+            <div class="text-center mb-10">
+                <p class="text-xs uppercase tracking-widest text-emerald-700 mb-2">Featured</p>
+                <h2 class="font-serif text-3xl md:text-4xl text-emerald-900">This season's picks</h2>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <article
+                    class="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition flex flex-col">
+                    <div class="relative aspect-4/3 w-full overflow-hidden">
+                        <span
+                            class="absolute top-3 left-3 z-10 bg-emerald-900 text-white text-[10px] tracking-widest uppercase px-2.5 py-1 rounded-full">New</span>
+                        <img src="https://images.unsplash.com/photo-1602607203475-c5e99918dfc5?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="Amber soy candle"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            loading="lazy" />
+                    </div>
+                    <div class="p-4 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-medium text-ink">Amber Soy Candle</h3>
+                            <p class="text-xs text-gray-500 mt-0.5">Hand-poured · 40h burn</p>
+                            <div class="mt-1 flex items-center gap-1 text-amber-500 text-xs">★★★★★ <span
+                                    class="text-gray-400 ml-1">(124)</span></div>
+                        </div>
+                        <div class="mt-4 flex items-center justify-between">
+                            <p class="font-serif text-lg text-emerald-900">₹890</p>
+                            <button
+                                class="bg-emerald-700 text-white text-sm px-4 py-2 rounded-lg hover:bg-emerald-600 transition">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <article
+                    class="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition flex flex-col">
+                    <div class="relative aspect-4/3 w-full overflow-hidden">
+                        <span
+                            class="absolute top-3 left-3 z-10 bg-amber-500 text-white text-[10px] tracking-widest uppercase px-2.5 py-1 rounded-full">Bestseller</span>
+                        <img src="https://images.unsplash.com/photo-1578500494198-246f612d3b3d?auto=format&fit=crop&w=800&q=80"
+                            alt="Terracotta vase"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            loading="lazy" />
+                    </div>
+                    <div class="p-4 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-medium text-ink">Terracotta Vase</h3>
+                            <p class="text-xs text-gray-500 mt-0.5">Matte finish · 22cm</p>
+                            <div class="mt-1 flex items-center gap-1 text-amber-500 text-xs">★★★★★ <span
+                                    class="text-gray-400 ml-1">(89)</span></div>
+                        </div>
+                        <div class="mt-4 flex items-center justify-between">
+                            <p class="font-serif text-lg text-emerald-900">₹1,290</p>
+                            <button
+                                class="bg-emerald-700 text-white text-sm px-4 py-2 rounded-lg hover:bg-emerald-600 transition">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <article
+                    class="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition flex flex-col">
+                    <div class="relative aspect-4/3 w-full overflow-hidden">
+                        <span
+                            class="absolute top-3 left-3 z-10 bg-emerald-900 text-white text-[10px] tracking-widest uppercase px-2.5 py-1 rounded-full">Limited</span>
+                        <img src="https://images.unsplash.com/photo-1574948740506-1e6278b50607?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="Stoneware teapot"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            loading="lazy" />
+                    </div>
+                    <div class="p-4 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-medium text-ink">Stoneware Teapot</h3>
+                            <p class="text-xs text-gray-500 mt-0.5">Speckled glaze · 800ml</p>
+                            <div class="mt-1 flex items-center gap-1 text-amber-500 text-xs">★★★★☆ <span
+                                    class="text-gray-400 ml-1">(31)</span></div>
+                        </div>
+                        <div class="mt-4 flex items-center justify-between">
+                            <p class="font-serif text-lg text-emerald-900">₹2,150</p>
+                            <button
+                                class="bg-emerald-700 text-white text-sm px-4 py-2 rounded-lg hover:bg-emerald-600 transition">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="story" class="bg-emerald-900 text-emerald-50">
+            <div class="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10 items-center">
+                <div class="aspect-square rounded-2xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1493552152660-f915ab47ae9d?auto=format&fit=crop&w=900&q=80"
+                        alt="Plants and natural textures" class="w-full h-full object-cover" loading="lazy" />
+                </div>
+                <div>
+                    <p class="text-xs uppercase tracking-widest text-emerald-300 mb-3">Our Philosophy</p>
+                    <h2 class="font-serif text-3xl md:text-4xl leading-tight">Slow living, beautifully made.</h2>
+                    <p class="mt-4 text-emerald-100/80 leading-relaxed">
+                        Every piece in our collection is chosen for its craftsmanship and the quiet way it fits into
+                        everyday rituals.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <footer id="contact" class="mt-16 border-t border-black/5">
+            <div class="max-w-6xl mx-auto px-6 py-10 flex flex-col md:flex-row justify-between gap-6">
+                <div>
+                    <p class="font-serif text-xl font-bold text-emerald-900">Aurora</p>
+                    <p class="text-sm text-gray-500 mt-2 max-w-xs">Curated home & lifestyle. Slow living, beautifully
+                        made.</p>
+                </div>
+                <div class="flex gap-10 text-sm text-gray-600">
+                    <div class="space-y-2">
+                        <a href="#" class="block hover:text-emerald-700">Shop</a>
+                        <a href="#story" class="block hover:text-emerald-700">Story</a>
+                    </div>
+                    <div class="space-y-2">
+                        <a href="#" class="block hover:text-emerald-700">Instagram</a>
+                        <a href="#" class="block hover:text-emerald-700">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center text-xs text-gray-400 pb-6">© 2026 Aurora Studio. All rights reserved.</p>
+        </footer>
+
+    </div>
+
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

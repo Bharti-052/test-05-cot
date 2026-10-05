@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+    --font-serif: 'Fraunces', serif;
+    --font-sans: 'Inter', sans-serif;
+
+    --color-cream: #F8F5F0;
+    --color-ink: #1A1A1A;
+
+    --color-emerald-50: #f0f7f4;
+    --color-emerald-100: #d9ebe3;
+    --color-emerald-500: #3a7d5c;
+    --color-emerald-600: #2e6349;
+    --color-emerald-700: #244e3a;
+    --color-emerald-900: #12261c;
+}
+
+
+.arc-loader {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: conic-gradient(from 0deg, #2e6349 0%, transparent 60%);
+    -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 6px), #000 calc(100% - 5px));
+    mask: radial-gradient(farthest-side, transparent calc(100% - 6px), #000 calc(100% - 5px));
+    animation: arc-spin 1s linear infinite;
+}
+
+@keyframes arc-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.fade-out {
+    opacity: 0 !important;
+    pointer-events: none;
+}
+
+.store-in {
+    opacity: 1 !important;
+}
+
+section[id] {
+    scroll-margin-top: 80px;
+}
